@@ -1,0 +1,68 @@
+body.menu-open .shead {
+  margin-top: 4.5cm; /* Adjust this value based on your needs */
+  transition: margin-top 0.3s ease;
+}
+.active {
+  color: green;
+}
+/* Basic styling for the navbar */
+.navbar {
+  font-family: "Iceland", sans-serif;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.navbar ul li a:hover {
+  color: #f4a261;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+  display: block;
+}
+
+
+/* Hamburger menu (hidden by default) */
+.hamburger {
+  display: none;
+  color: black;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .nav-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px; /* Adjust based on navbar height */
+      left: 0;
+      width: 100%;
+      margin-left: 1cm;
+  }
+
+  .nav-menu.active {
+      display: flex;
+  }
+
+  .hamburger {
+      display: block;
+  }
+}
