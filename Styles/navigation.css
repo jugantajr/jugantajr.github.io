@@ -46,6 +46,18 @@ body.menu-open .shead {
   cursor: pointer;
 }
 
+.dark-mode .hamburger {
+  color: white;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+.toggle-btn{
+border: none;
+}
+
 /* Responsive styles for mobile */
 @media (max-width: 768px) {
   .nav-menu {
