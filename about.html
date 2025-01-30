@@ -14,26 +14,30 @@
     </style>
 </head>
 <body>
+    <script>
+        function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));}
+    if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+    }
+    </script>
     <nav>
         <div class="navbar">
-            <div class="logo"><a href="index.html"><img src="logos/iam1.png"  alt="Clickable Image" style="width: 30px; height: 30px;position:relative"></a></div>
+            <div class="logo"><a href="index.html"><img src="logos/juganta.png"  alt="Clickable Image" style="width: 30px; height: 30px;position:relative"></a></div>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="code.html">Codes</a></li>
                 <li><a class="active" href="about.html">About Me</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a><button class="toggle-btn" onclick="toggleDarkMode()"><img src="logos/dark-mode.png" alt="Clickable Image" style="width: 20px; height: 20px;"></button></a></li>
             </ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
         </div>
     </nav>
     
-    <div class="pdfpage">
-        <div class="pdf-container">
-            <!-- Embed the PDF file -->
-            <object data="pdfs/cv.pdf" type="application/pdf">
-                <p>It appears you don't have a PDF plugin for this browser.
-                You can <a href="pdfs/cv.pdf">download the PDF file.</a></p>
-            </object>
-        </div>
+    <div class="main">
+        <p style="text-align: center; font-size: larger;"><a target="blank" href="pdfs/cv.pdf">cv</a></p>
     </div>
 </body>
 </html>
